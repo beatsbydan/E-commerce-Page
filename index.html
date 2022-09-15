@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./js/carousel.js"></script>
+    <script defer src="./js/cart.js"></script>
+    <script defer src="./js/dropdown.js"></script>
+    <script defer src="./js/lightbox.js"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    
+    <title>Frontend Mentor | E-commerce product page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution { font-size: 11px; text-align: center; }
+      .attribution a { color: hsl(228, 45%, 44%); }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header--left">
+        <div class="head--block">
+          <button title="menu" aria-controls="menu" class="nav-toggle" aria-expanded="false"></button>  
+          <div class="logo">
+            <img src="./images/logo.svg" alt="">
+          </div>
+        </div>
+        <nav>
+          <div class="dropdown">
+            <ul id="menu" class="menu" data-visible = "false">
+              <li><a href="#" class="nav-item current--page">Collections</a></li>
+              <li><a href="#" class="nav-item">Men</a></li>
+              <li><a href="#" class="nav-item">Women</a></li>
+              <li><a href="#" class="nav-item">About</a></li>
+              <li><a href="#" class="nav-item">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="header--right">
+        <div class="cart">
+          <div class="cart--notification">
+            <div class="notificator" data-visible="false">
+              <span></span>
+            </div>
+            <img class="cart-btn" src="./images/icon-cart.svg" alt="">
+          </div>
+          <div class="cart--content" data-visible="false">
+            <h4>Cart</h4>
+            <div class="content">
+              <div class="item">
+                <div class="details">
+                  <img class="selected" src="./images/image-product-1-thumbnail.jpg" alt="">
+                  <div class="description">
+                      <p>Fall Limited Edition Sneakers</p>
+                      <p class="price">$125.00 x <span class="operand"></span><span class="result"> $<span class="value"></span></span></p>
+                  </div>
+                </div>
+                <img class="delete" src="./images/icon-delete.svg" alt="">
+              </div>
+              <button class="checkout">Checkout</button>
+            </div>
+          </div>
+        </div>
+        <div class="avatar">
+          <img src="./images/image-avatar.png" alt="">
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="block--container">
+        <section class="carousel">
+          <button title="previous" class="previous"></button>
+          <div class="carousel--container">
+            <ul class="carousel--track">
+              <li class="carousel--slide current--slide"><img src="./images/image-product-1.jpg" alt=""></li>
+              <li class="carousel--slide"><img src="./images/image-product-2.jpg" alt=""></li>
+              <li class="carousel--slide"><img src="./images/image-product-3.jpg" alt=""></li>
+              <li class="carousel--slide"><img src="./images/image-product-4.jpg" alt=""></li>
+            </ul>
+          </div>
+          <button title="next" class="next"></button>
+          <div class="carousel--thumbnail">
+            <ul class="thumbnail--track">
+              <li class="current--thumbnail--item"><img src="./images/image-product-1-thumbnail.jpg" class="current--thumbnail" alt=""></li>
+              <li><img src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+              <li><img src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+              <li><img src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+            </ul>
+          </div>
+        </section>
+        <section class="right--container">
+          <div class="texts">
+            <h5>SNEAKER COMPANY</h5>
+            <h1>Fall Limited Edition Sneakers</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          </div>
+          <div class="prices">
+            <div class="discount">
+              <h2>$125.00</h2>
+              <div class="discount--price">
+                <p>50%</p>
+              </div>
+            </div>
+            <div class="original--price">
+              <p>$250.00</p>  
+            </div>
+          </div>
+          <div class="add__to--cart">
+            <div class="increment">
+              <button title="subtract" class="subtract"><img src="./images/icon-minus.svg" alt=""></button>
+              <span class="dynamic--number">0</span>
+              <button class="add" title="add"><img src="./images/icon-plus.svg" alt=""></button>
+            </div>
+            <div class="push">
+              <button class="to-cart">Add to cart</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--lightbox-->
+    <div class="lightbox" data-visible="false">
+      <section class="lightbox__carousel">
+        <button title="close" class="lightbox__close"></button>
+        <button title="previous" class="lightbox__previous"></button>
+        <div class="lightbox__carousel--container">
+          <ul class="lightbox__carousel--track">
+            <li class="lightbox__carousel--slide lightbox__current--slide"><img src="./images/image-product-1.jpg" alt=""></li>
+            <li class="lightbox__carousel--slide"><img src="./images/image-product-2.jpg" alt=""></li>
+            <li class="lightbox__carousel--slide"><img src="./images/image-product-3.jpg" alt=""></li>
+            <li class="lightbox__carousel--slide"><img src="./images/image-product-4.jpg" alt=""></li>
+          </ul>
+        </div>
+        <button title="next" class="lightbox__next"></button>
+        <div class="lightbox__carousel--thumbnail">
+          <ul class="lightbox__thumbnail--track">
+            <li class="lightbox__current--thumbnail--item"><img src="./images/image-product-1-thumbnail.jpg" class="lightbox__current--thumbnail" alt=""></li>
+            <li><img src="./images/image-product-2-thumbnail.jpg" alt=""></li>
+            <li><img src="./images/image-product-3-thumbnail.jpg" alt=""></li>
+            <li><img src="./images/image-product-4-thumbnail.jpg" alt=""></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
