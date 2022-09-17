@@ -38,10 +38,10 @@ Users should be able to:
 
 
 ### What I learned
-I learnt about implementing local storage for a shopping cart System
-I learnt about appending child elements to Parent elements
-I learnt about getting and setting attributes from HTML in JavaScript
-I learnt more about building carousels
+I learnt about implementing local storage for a shopping cart System.
+I learnt about appending child elements to Parent elements.
+I learnt about getting and setting attributes from HTML in JavaScript.
+I learnt more about building carousels.
 
 ### Continued development
-I'm gonna continue working on local storage functionalities. I'd also keep working on implementing more array methods by taking on projects that require such
+I'm gonna continue working on local storage functionalities. I'd also keep working on implementing more array methods by taking on projects that require such. I'm also gonna push on with React JS and start asynchronus JS properly.

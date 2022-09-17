@@ -58,19 +58,19 @@ nav{
     position: fixed;
     background-image: url(./images/icon-close.svg);
 }
+.dropdown[data-visible= "true"]{
+    transform: translateX(0%);   
+}
 .dropdown{
-    background-color: var(--lightbox-background);
-    width: 100%;
-    height:100%;
+    width:100%;
     transform: translateX(-100%);
+    height: 100%;
     position: fixed;
     z-index: 999;
-    top: 0;
+    top:0;
     left: 0;
+    background-color: var(--lightbox-background);
     transition: all 700ms ease-out;
-}
-.dropdown[data-visible= "true"]{
-    transform: translateX(0%);
 }
 .menu{
     z-index: 999;
@@ -84,8 +84,13 @@ nav{
     display: flex;
     flex-direction: column;
     gap:20px;
+    transform: translateX(-100%);
     padding: 6em 10em 3em 5%;
     list-style: none;
+    transition: all 700ms ease-out;
+}
+.menu[data-visible= "true"]{
+    transform: translateX(0%);
 }
 .menu li a {
     color:var(--Very-vark-blue) ;
@@ -456,6 +461,13 @@ h5{
         top: unset;
         left: unset;
     }
+    .dropdown{
+        transform: translateX(0%);
+        z-index: unset;
+        background-color: transparent;
+        position: relative;
+    }
+    
     .menu li a{
         font-weight: 400;
         font-size: 1.2rem;
