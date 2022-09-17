@@ -120,7 +120,7 @@ nav{
 .cart--content{
     z-index: 988;
     top:80px;
-    transform: translateX(180%);
+    transform: translateY(-170%);
     transition: all 700ms ease-out;
     right: 2%;
     margin:auto;
@@ -134,7 +134,7 @@ nav{
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.199);
 }
 .cart--content[data-visible ="true"]{
-    transform: translateX(0%);
+    transform: translateY(0%);
 }
 .content{
     margin-top: 20px;
@@ -436,6 +436,7 @@ h5{
         justify-content: space-between;
         height: unset;
         padding: unset;
+        z-index: 0;
         width:100%;
         max-width: 600px;
         top: unset;

@@ -57,9 +57,7 @@ lightBoxPrevBtn.addEventListener("click", () => {
     if(lightBoxTargetThumbs === null){
         lightBoxTargetThumbs = lightBoxCurrentThumbs
     }
-    // if(){
-    //     return
-    // }
+    
     if(lightBoxTargetSlide === null){
         lightBoxTargetSlide = lightBoxCurrentSlide
     }
