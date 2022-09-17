@@ -53,8 +53,8 @@ toCartBtn.addEventListener("click", () => {
 
 function showCartItem(){
         if(cart){
-            notification.setAttribute("data-visible", "true")
             cart.forEach(item =>{
+                notification.setAttribute("data-visible", "true")
                 //calculating and displaying the cost
                 let fixedPrice = 125
                 let result = fixedPrice * item

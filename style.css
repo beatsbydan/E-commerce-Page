@@ -58,6 +58,20 @@ nav{
     position: fixed;
     background-image: url(./images/icon-close.svg);
 }
+.dropdown{
+    background-color: var(--lightbox-background);
+    width: 100%;
+    height:100%;
+    transform: translateX(-100%);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transition: all 700ms ease-out;
+}
+.dropdown[data-visible= "true"]{
+    transform: translateX(0%);
+}
 .menu{
     z-index: 999;
     position: fixed;
@@ -71,12 +85,7 @@ nav{
     flex-direction: column;
     gap:20px;
     padding: 6em 10em 3em 5%;
-    transform: translateX(-100%);
     list-style: none;
-    transition: all 700ms ease-out;
-}
-.menu[data-visible= "true"]{
-    transform: translateX(0%);
 }
 .menu li a {
     color:var(--Very-vark-blue) ;
@@ -101,6 +110,9 @@ nav{
     margin-top: 27%;
     color: var(--Dark-grayish-blue);
 }
+.notificator{
+    display: none;
+}
 .notificator[data-visible= "true"]{
     background-color: var(--Orange);
     color: white;
@@ -111,9 +123,11 @@ nav{
     margin: auto;
     border-radius: 5px;
     z-index: 1;
+    display: block;
     font-size: 0.65rem;
     text-align: center;
 }
+
 .cart--notification > img {
     cursor: pointer;
 }
