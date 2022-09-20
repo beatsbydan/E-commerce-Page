@@ -45,3 +45,8 @@ Users should be able to:
 - I'm gonna continue working on local storage functionalities.
 - I'd also keep working on implementing more array methods by taking on     projects  that require such.
 - I'm also gonna push on with React JS and start asynchronus JS properly.
+
+### Author
+
+- Frontend Mentor - [@beatsbydan](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [@beatsby_dan](https://www.twitter.com/yourusername)
