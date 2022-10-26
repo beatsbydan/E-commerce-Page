@@ -27,7 +27,6 @@ content.innerHTML = `<p class="default--text">Your cart is empty.</p>`
 //storing the cart in the local storage
 let cart = JSON.parse(localStorage.getItem("item"))
 let quantity = parseFloat(dynamicNumber.innerHTML)
-    console.log(quantity)
     addBtn.addEventListener("click", () => {
         quantity++;
         dynamicNumber.innerHTML = quantity.toString()
@@ -45,40 +44,43 @@ toCartBtn.addEventListener("click", () => {
     if(!cart){
         cart = []
     }
-    dynamicNumber.innerHTML = 0
     cart.push(quantity)
+    dynamicNumber.innerHTML = 0
     localStorage.setItem("item", JSON.stringify(cart))
-    showCartItem()            
+    showCartItem();    
+    quantity = 0        
 })
 
 function showCartItem(){
-        if(cart){
-            cart.forEach(item =>{
-                notification.setAttribute("data-visible", "true")
-                //calculating and displaying the cost
-                let fixedPrice = 125
-                let result = fixedPrice * item
-                let price = result.toString()
-                notification.innerHTML = item
-                // notificator = `<div class="notificator" data-visible="false">
-                //                 <span></span>
-                //             </div>`
-                content.innerHTML = `<div class="item">
-                                        <div class="details">
-                                            <img class="selected" src="./images/image-product-1-thumbnail.jpg" alt="">
-                                            <div class="description">
-                                                <p>Fall Limited Edition Sneakers</p>
-                                                <p class="price">$125.00 x <span class="operand">${item}</span><span class="result"> $<span class="value">${price}</span></span></p>
+        if (quantity == 0)
+        {
+            return
+        }
+        else{
+            if(cart){
+                cart.forEach(item =>{
+                    notification.setAttribute("data-visible", "true")
+                    //calculating and displaying the cost
+                    let fixedPrice = 125
+                    let result = fixedPrice * item
+                    let price = result.toString()
+                    notification.innerHTML = item
+                    content.innerHTML = `<div class="item">
+                                            <div class="details">
+                                                <img class="selected" src="./images/image-product-1-thumbnail.jpg" alt="">
+                                                <div class="description">
+                                                    <p>Fall Limited Edition Sneakers</p>
+                                                    <p class="price">$125.00 x <span class="operand">${item}</span><span class="result"> $<span class="value">${price}</span></span></p>
+                                                </div>
                                             </div>
+                                            <img class="delete" onclick = "deleteItem()" src="./images/icon-delete.svg" alt="">
                                         </div>
-                                        <img class="delete" onclick = "deleteItem()" src="./images/icon-delete.svg" alt="">
-                                    </div>
-                                    <button class="checkout">Checkout</button> `
-        
-            })    
+                                        <button class="checkout">Checkout</button> `
+                })    
+            }
         }
 }
-showCartItem()
+showCartItem();
 //clear the cart
 function deleteItem(){
     content.innerHTML = `<p class="default--text">Your cart is empty.</p>`
@@ -87,4 +89,3 @@ function deleteItem(){
     cart.splice(0,cart.length)
     localStorage.setItem("item", JSON.stringify(cart))
 }
-    
