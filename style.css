@@ -615,7 +615,7 @@ h5{
         top: 0;
         bottom: 0;
         z-index: 1000;
-        position: fixed;
+        position:fixed;
         transform: translateX(-150%);
         transition: all 800ms ease-out;
         background-color: var(--lightbox-background);
@@ -627,8 +627,8 @@ h5{
         display: block;
         width:60%;
         z-index: 1000;
-        max-width: 450px;
-        height: 450px;
+        max-width: 400px;
+        height: 400px;
         top:50%;
         left: 50%;
         transform: translate(-50%,-50%);
@@ -659,11 +659,11 @@ h5{
         background-image: url(./images/icon-close-lightbox.svg);
     }
     .lightbox__carousel--slide img{
-        max-width: 450px;
+        max-width: 400px;
         object-fit:cover;
         width:100%;
         cursor: pointer;
-        height: 450px;
+        height: 400px;
         border-radius: 16px;
     }
     .lightbox__carousel--thumbnail{
@@ -721,7 +721,7 @@ h5{
         z-index: 1;
         top:50%;
         transform: translateY(-50%);
-        left:-4%;
+        transform: translateX(-50%);
         border: none;
         background-color: white;
         width: 50px;
@@ -743,7 +743,8 @@ h5{
         cursor: pointer;
         top:50%;
         transform: translateY(-50%);
-        right:-4%;
+        transform: translateX(50%);
+        right: 0;
         border: none;
         background-color: white;
         width: 50px;

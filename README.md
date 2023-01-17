@@ -35,7 +35,6 @@ Users should be able to:
 
 ### What I learned
 
-- I learnt about implementing local storage for a shopping cart System.
 - I learnt about appending child elements to Parent elements.
 - I learnt about getting and setting attributes from HTML in JavaScript.
 - I learnt more about building carousels.
